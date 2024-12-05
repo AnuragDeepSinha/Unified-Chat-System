@@ -17,7 +17,7 @@ JavaScript (Optional): For interactive elements like toggling menus.
 
 # Installation
 Clone the Repository:
-git clone https://github.com/username/unified-chat-system.git
+https://github.com/AnuragDeepSinha/Unified-Chat-System.git
 cd unified-chat-system
 
 # File Structure
