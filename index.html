@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== REMIXICONS ===============-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+
+    <title>Chat website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main container for the chat website -->
+    <div class="main-container">
+        <!-- Navigation bar section -->
+        <div class="navbar">
+            <div class="nav-left">
+                <button class="menu-btn" id="toggleBtn">
+                    <i class="ri-menu-2-fill"></i>
+                </button>
+                <i class=""></i> Web Chat
+            </div>
+            <div class="nav-right">
+                <form class="search-bar">
+                    <i class="ri-search-line search-icon"></i>
+                    <input type="text" name="" placeholder="Search here...">
+                </form>
+                <i class="ri-settings-3-fill" class="setting"></i>
+                <a href="#" class="profile-link">
+                    <img src="https://i.pinimg.com/originals/9a/e3/c9/9ae3c90ae5a5f90123dc88231f16753d.jpg" alt="" />
+                </a>
+            </div>
+        </div>
+        <!-- Bottom section containing side menu and main chat area -->
+        <div class="bottom-sec">
+            <div class="side-menu" id="SideMenu">
+                <form class="search-bar">
+                    <i class="ri-search-line search-icon"></i>
+                    <input type="text" name="" placeholder="Search here...">
+                </form>
+                <ul>
+                    <li>
+                        <i class="ri-home-gear-fill"></i>
+                        <a href="#" class="active-link">Home</a>
+                    </li>
+                    <li>
+                        <i class="ri-group-fill"></i>
+                        <a href="#">Groups</a>
+                    </li>
+                    <li>
+                        <i class="ri-account-pin-box-line"></i>
+                        <a href="#">Profile</a>
+                    </li>
+                    <li>
+                        <i class="ri-notification-fill"></i>
+                        <a href="#">Notifications</a>
+                    </li>
+                    <li>
+                        <i class="ri-logout-circle-line"></i>
+                        <a href="#">Logout</a>
+                    </li>
+                </ul>
+                <div class="contacts">
+                    <div class="chat">
+                        <img src="https://cdn.pixabay.com/photo/2021/12/27/10/50/telegram-icon-6896828_1280.png" alt="" />
+                        <p>Vikas</p>
+                    </div>
+                    <div class="chat">
+                        <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" alt="" />
+                        <p>Raj</p>
+                    </div>
+                    <div class="chat">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Facebook_Messenger_logo_2020.svg/1200px-Facebook_Messenger_logo_2020.svg.png" alt="" />
+                        <p>Ayush</p>
+                    </div>
+                    <div class="chat">
+                        <img src="https://cdn.pixabay.com/photo/2015/08/03/13/58/whatsapp-873316_1280.png" alt="" />
+                        <p>Vishal</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contactstion">
+                <div class="chat-header">
+                    <div class="profile-link-header">
+                        <span class="profile-link-main">
+                            <img src="https://thumbs.dreamstime.com/b/englishman-detective-male-portrait-englishman-detective-retro-style-male-portrait-adult-man-black-suit-vintage-hat-105324903.jpg" alt="" />
+                        </span>
+                        <h2>Rahul</h2>
+                    </div>
+                    <i class="ri-more-2-fill"></i>
+                </div>
+
+                <div class="all-chat">
+                    <div class="message-item">
+                        <img src="https://thumbs.dreamstime.com/b/englishman-detective-male-portrait-englishman-detective-retro-style-male-portrait-adult-man-black-suit-vintage-hat-105324903.jpg" alt="" />
+                        <div class="message-content">
+                            <h4>Rahul <span>* 4.05PM</span></h4>
+                            <p>Hi.</p>
+                        </div>
+                    </div>
+                    <div class="message-item my-message">
+                        <img src="https://i.pinimg.com/originals/9a/e3/c9/9ae3c90ae5a5f90123dc88231f16753d.jpg" alt="" />
+                        <div class="message-content">
+                            <h4>you<span>* 4.06PM</span></h4>
+                            <p>Hi.</p>
+                        </div>
+                    </div>
+                    <div class="message-item">
+                        <img src="https://thumbs.dreamstime.com/b/englishman-detective-male-portrait-englishman-detective-retro-style-male-portrait-adult-man-black-suit-vintage-hat-105324903.jpg" alt="" />
+                        <div class="message-content">
+                            <h4>Rahul<span>* 4.07PM</span></h4>
+                            <p>How are you?</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="input-area">
+                    <i class="ri-add-circle-line chat-icon"></i>
+
+                    <form class="message-input-form">
+                        <input type="text" name="text" placeholder="Enter Message...">
+                        <i class="ri-emoji-sticker-fill chat-icon"></i>
+                        <i class="ri-attachment-2 chat-icon"></i>
+                    </form>
+
+                    <i class="ri-send-plane-2-fill chat-icon"></i>
+                    
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
