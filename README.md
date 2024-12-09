@@ -1,6 +1,6 @@
 # Unified Chat System 💬
-Welcome to the Unified Chat System, a sleek, responsive, and intuitive chat application designed to deliver seamless communication. Whether you're chatting with a friend, colleague, or group, this system makes messaging easier and more enjoyable.
-A sleek and responsive chat application designed to provide seamless communication with an intuitive user interface. This project is perfect for anyone looking to understand or build a web-based chat application with HTML, CSS, and JavaScript.
+A real-time web chat application built using Flask and Socket.IO. It supports user-to-user chats, profile customization, group chats, and the integration of messaging platforms like WhatsApp and Telegram.
+This project is perfect for anyone looking to understand or build a web-based chat application with HTML, CSS, and JavaScript. make this attractive
 
 # Features ✨
 # 🚀 Real-time Messaging: 
