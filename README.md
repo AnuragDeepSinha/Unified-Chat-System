@@ -42,8 +42,7 @@ Python 3.7+
 pip (Python package installer)
 # Steps
 Clone the repository
-git clone https://github.com/yourusername/web-chat-app.git
-cd web-chat-app
+https://github.com/AnuragDeepSinha/Unified-Chat-System.git
 
 # Install dependencies:
 pip install -r requirements.txt
