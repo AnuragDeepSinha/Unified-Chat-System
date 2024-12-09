@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Web Chat</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Side (User List Section) -->
+        <div class="user-list" id="user-list">
+            <div class="header">
+                <div class="search-bar">
+                    <i class="ri-search-line"></i>
+                    <input type="text" placeholder="Search..." onkeyup="searchUser()">
+                </div>
+                <i class="ri-settings-3-line settings-icon" onclick="toggleSettingsMenu()"></i>
+            </div>
+            <div class="settings-menu" id="settings-menu">
+                <div class="settings-option" onclick="showProfileSettings()">Profile</div>
+                <div class="settings-option" onclick="showGroupSettings()">New Group</div>
+                <div class="settings-option" onclick="clearChatHistory()">Clear Chat History</div>
+                <div class="settings-option" onclick="showLinkAppsSettings()">Link Apps</div>
+            </div>
+            <ul id="users">
+                {% for user in users %}
+                <li class="contact" onclick="openChat('{{ user }}')">
+                    <img src="{{ user_pics[user] }}" alt="{{ user }}'s Profile Picture">
+                    <span class="contact-name">{{ user }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+            <ul id="groups">
+                <!-- Groups will appear here -->
+            </ul>
+        </div>
+
+        <!-- Right Side (Chat Section) -->
+        <div class="chat-section" id="chat-section">
+            <div class="chat-header">
+                <button class="back-btn" onclick="goBack()">Back</button>
+                <img id="chat-profile-pic" src="https://via.placeholder.com/50/0000FF/808080?text=Anime" alt="User Profile">
+                <h2 id="chat-header">Chat with</h2>
+            </div>
+
+            <div class="chat-window" id="chat-window">
+                <!-- Messages will appear here -->
+            </div>
+
+            <div class="chat-input">
+                <form class="message-input-form" onsubmit="sendMessage(event)">
+                    <select id="platform-select">
+                        <option value="default">Select Platform</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                        <option value="Telegram">Telegram</option>
+                    </select>
+                    <input type="text" id="message-input" placeholder="Type a message..." autocomplete="off" required>
+                    <button type="submit" class="send-button">
+                        <i class="ri-send-plane-2-line"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Profile Settings Modal -->
+        <div class="modal" id="profile-modal">
+            <div class="modal-content">
+                <h2>Profile Settings</h2>
+                <img id="profile-pic-preview" src="https://via.placeholder.com/50/0000FF/808080?text=Anime" alt="Profile Pic">
+                <form id="profile-form" enctype="multipart/form-data" onsubmit="uploadProfilePic(event)">
+                    <input type="file" name="file" accept="image/*">
+                    <input type="text" id="profile-name" placeholder="Enter your name" required>
+                    <button type="submit">Update Profile</button>
+                </form>
+                <button onclick="closeProfileSettings()">Close</button>
+            </div>
+        </div>
+
+        <!-- Group Settings Modal -->
+        <div class="modal" id="group-modal">
+            <div class="modal-content">
+                <h2>Create New Group</h2>
+                <input type="text" id="group-name" placeholder="Group Name" required>
+                <select id="group-participants" multiple>
+                    {% for user in users %}
+                    <option value="{{ user }}">{{ user }}</option>
+                    {% endfor %}
+                </select>
+                <button onclick="createGroup()">Create Group</button>
+                <button onclick="closeGroupSettings()">Close</button>
+            </div>
+        </div>
+
+        <!-- Link Apps Modal -->
+        <div class="modal" id="link-apps-modal">
+            <div class="modal-content">
+                <h2>Link Messaging Apps</h2>
+                <p>Link your WhatsApp and Telegram accounts to send and receive messages from these apps in this web app.</p>
+                <div class="app-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" class="app-icon">
+                    <span>WhatsApp</span>
+                    <button onclick="linkApp('WhatsApp')">Link</button>
+                </div>
+                <div class="app-option">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="Telegram" class="app-icon">
+                    <span>Telegram</span>
+                    <button onclick="linkApp('Telegram')">Link</button>
+                </div>
+                <button onclick="closeLinkAppsSettings()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.6.1/socket.io.min.js" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
