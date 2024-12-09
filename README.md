@@ -1,4 +1,5 @@
 # Unified Chat System 💬
+Welcome to the Unified Chat System, a sleek, responsive, and intuitive chat application designed to deliver seamless communication. Whether you're chatting with a friend, colleague, or group, this system makes messaging easier and more enjoyable.
 A sleek and responsive chat application designed to provide seamless communication with an intuitive user interface. This project is perfect for anyone looking to understand or build a web-based chat application with HTML, CSS, and JavaScript.
 
 # Features ✨
